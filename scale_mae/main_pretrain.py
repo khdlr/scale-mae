@@ -29,23 +29,23 @@ import os
 import re
 
 import kornia.augmentation as K
-import models_mae
+import .models_mae
 import numpy as np
 import timm.optim.optim_factory as optim_factory
-import util.misc as misc
+import .util.misc as misc
 import yaml
-from dataloaders.utils import get_dataset_and_sampler, get_eval_dataset_and_transform
-from engine_pretrain import train_one_epoch
-from eval.knn import kNN
+from .dataloaders.utils import get_dataset_and_sampler, get_eval_dataset_and_transform
+from .engine_pretrain import train_one_epoch
+from .eval.knn import kNN
 from kornia.augmentation import AugmentationSequential
 from kornia.constants import Resample
-from lib.scheduler import ConstantResolutionScheduler, RandomResolutionScheduler
-from lib.transforms import CustomCompose
+from .lib.scheduler import ConstantResolutionScheduler, RandomResolutionScheduler
+from .lib.transforms import CustomCompose
 from PIL import Image
 from torch.distributed.elastic.multiprocessing.errors import record
 from torch.utils.data import Subset
-from util.misc import NativeScalerWithGradNormCount as NativeScaler
-from util.resolution_sched import (
+from .util.misc import NativeScalerWithGradNormCount as NativeScaler
+from .util.resolution_sched import (
     get_output_size_scheduler,
     get_source_size_scheduler,
     get_target_size_scheduler,

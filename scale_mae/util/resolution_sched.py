@@ -1,4 +1,4 @@
-from lib.scheduler import ConstantResolutionScheduler, RandomResolutionScheduler
+from ..lib.scheduler import ConstantResolutionScheduler, RandomResolutionScheduler
 import numpy as np
 import re
 

@@ -1,6 +1,6 @@
 import torch
-from lib.transforms import get_inputs_outputs
-from samplers.distributed import DistributedRandomGeoSampler
+from ..lib.transforms import get_inputs_outputs
+from ..samplers.distributed import DistributedRandomGeoSampler
 from torchgeo.datasets import RasterDataset, stack_samples
 from torchgeo.samplers import Units
 

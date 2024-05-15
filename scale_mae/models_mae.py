@@ -14,11 +14,11 @@ from functools import partial
 
 import torch
 import torch.nn as nn
-from lib.fpn import FCNHead, FPNHead
-from lib.gpt import Block as GPTBlock
-from lib.transformer import MAEDecoder
+from .lib.fpn import FCNHead, FPNHead
+from .lib.gpt import Block as GPTBlock
+from .lib.transformer import MAEDecoder
 from timm.models.vision_transformer import Block, PatchEmbed
-from util.pos_embed import (
+from .util.pos_embed import (
     get_2d_sincos_pos_embed,
     get_2d_sincos_pos_embed_with_resolution,
 )

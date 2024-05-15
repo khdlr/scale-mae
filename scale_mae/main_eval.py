@@ -30,19 +30,19 @@ import tempfile
 
 import kornia.augmentation as K
 import matplotlib.pyplot as plt
-import models_mae
+import .models_mae
 import numpy as np
 import timm.optim.optim_factory as optim_factory
-import util.misc as misc
+import .util.misc as misc
 import yaml
-from dataloaders.resic45 import build_resic
-from dataloaders.utils import get_dataset_and_sampler
-from engine_pretrain import train_one_epoch
-from eval.knn import kNN
+from .dataloaders.resic45 import build_resic
+from .dataloaders.utils import get_dataset_and_sampler
+from .engine_pretrain import train_one_epoch
+from .eval.knn import kNN
 from kornia.augmentation import AugmentationSequential
 from kornia.constants import Resample
-from lib.scheduler import ConstantResolutionScheduler, RandomResolutionScheduler
-from lib.transforms import CustomCompose
+from .lib.scheduler import ConstantResolutionScheduler, RandomResolutionScheduler
+from .lib.transforms import CustomCompose
 from PIL import Image
 from torch.distributed.elastic.multiprocessing.errors import record
 from torch.utils.data import DataLoader, Subset
@@ -50,8 +50,8 @@ from torchgeo.datasets import NAIP, stack_samples
 from torchgeo.datasets.utils import download_url
 from torchgeo.samplers import RandomGeoSampler, Units
 from torchvision import transforms
-from util.misc import NativeScalerWithGradNormCount as NativeScaler
-from util.misc import is_main_process
-from wandb_log import WANDB_LOG_IMG_CONFIG
+from .util.misc import NativeScalerWithGradNormCount as NativeScaler
+from .util.misc import is_main_process
+from .wandb_log import WANDB_LOG_IMG_CONFIG
 
 Image.MAX_IMAGE_PIXELS = 1000000000

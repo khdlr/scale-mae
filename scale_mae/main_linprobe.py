@@ -33,16 +33,16 @@ from torch.utils.data import Subset
 from torch.utils.tensorboard import SummaryWriter
 from wandb_log import WANDB_LOG_IMG_CONFIG
 
-import models_vit
-import util.lr_decay as lrd
-import util.misc as misc
-from dataloaders.utils import get_dataset_and_sampler, get_eval_dataset_and_transform
-from engine_finetune import evaluate, train_one_epoch
-from lib.transforms import CustomCompose
+import .models_vit
+import .util.lr_decay as lrd
+import .util.misc as misc
+from .dataloaders.utils import get_dataset_and_sampler, get_eval_dataset_and_transform
+from .engine_finetune import evaluate, train_one_epoch
+from .lib.transforms import CustomCompose
 from PIL import Image
 from timm.models.layers import trunc_normal_
-from util.lars import LARS
-from util.misc import NativeScalerWithGradNormCount as NativeScaler
+from .util.lars import LARS
+from .util.misc import NativeScalerWithGradNormCount as NativeScaler
 
 Image.MAX_IMAGE_PIXELS = 1000000000
 

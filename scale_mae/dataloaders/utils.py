@@ -1,7 +1,7 @@
 import os
 
 import torch
-import util.misc as misc
+import ..util.misc as misc
 from torchvision import datasets, transforms
 from torchvision.datasets import ImageFolder
 

@@ -13,8 +13,8 @@ import sys
 from typing import Iterable
 
 import torch
-import util.lr_sched as lr_sched
-import util.misc as misc
+import .util.lr_sched as lr_sched
+import .util.misc as misc
 from wandb_log import wandb_dump_input_output, wandb_log_metadata
 
 

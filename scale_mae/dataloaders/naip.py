@@ -1,8 +1,8 @@
 from typing import Any, Dict, Optional
 
-from lib.transforms import get_inputs_outputs
+from ..lib.transforms import get_inputs_outputs
 from matplotlib import pyplot as plt
-from samplers.distributed import DistributedRandomGeoSampler
+from ..samplers.distributed import DistributedRandomGeoSampler
 from torchgeo.datasets import stack_samples
 from torchgeo.samplers import Units
 

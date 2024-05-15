@@ -22,16 +22,16 @@ import torch
 import torch.backends.cudnn as cudnn
 from torch.utils.tensorboard import SummaryWriter
 
-import models_vit
-import util.lr_decay as lrd
-import util.misc as misc
-from engine_finetune import evaluate, train_one_epoch
+import .models_vit
+import .util.lr_decay as lrd
+import .util.misc as misc
+from .engine_finetune import evaluate, train_one_epoch
 from timm.data.mixup import Mixup
 from timm.loss import LabelSmoothingCrossEntropy, SoftTargetCrossEntropy
 from timm.models.layers import trunc_normal_
-from util.datasets import build_dataset
-from util.misc import NativeScalerWithGradNormCount as NativeScaler
-from util.pos_embed import interpolate_pos_embed
+from .util.datasets import build_dataset
+from .util.misc import NativeScalerWithGradNormCount as NativeScaler
+from .util.pos_embed import interpolate_pos_embed
 
 
 def get_args_parser():
